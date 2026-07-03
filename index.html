@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neon Muncher</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell" aria-label="Neon Muncher arcade game">
+      <section class="game-panel">
+        <div class="topbar">
+          <div>
+            <span class="label">分数</span>
+            <strong id="score">0</strong>
+          </div>
+          <div>
+            <span class="label">最高</span>
+            <strong id="best">0</strong>
+          </div>
+          <div>
+            <span class="label">关卡</span>
+            <strong id="level">1</strong>
+          </div>
+          <div>
+            <span class="label">生命</span>
+            <strong id="lives">3</strong>
+          </div>
+        </div>
+
+        <div class="canvas-wrap">
+          <canvas id="game" width="560" height="620" aria-label="Pac-Man style maze game"></canvas>
+          <div id="overlay" class="overlay">
+            <h1>Neon Muncher</h1>
+            <p id="overlayText">吃掉所有能量豆，避开巡逻幽灵。</p>
+            <button id="startButton" type="button">开始游戏</button>
+          </div>
+        </div>
+
+        <div class="controls" aria-label="Game controls">
+          <button type="button" data-dir="up" aria-label="向上">▲</button>
+          <div>
+            <button type="button" data-dir="left" aria-label="向左">◀</button>
+            <button type="button" data-dir="down" aria-label="向下">▼</button>
+            <button type="button" data-dir="right" aria-label="向右">▶</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side-panel">
+        <h2>玩法循环</h2>
+        <dl>
+          <div>
+            <dt>移动</dt>
+            <dd>方向键 / WASD / 触屏按钮</dd>
+          </div>
+          <div>
+            <dt>能量豆</dt>
+            <dd>短时间反吃幽灵，连吃有加成</dd>
+          </div>
+          <div>
+            <dt>暂停</dt>
+            <dd>按 P 暂停，Enter 重开当前局</dd>
+          </div>
+        </dl>
+      </aside>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
